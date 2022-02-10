@@ -63,10 +63,14 @@ function App() {
     if (!tenzies) {
       setDice(prevDice => prevDice.map(die => (die.isHeld ? die : createDie())))
       setRollCount(prevCount => prevCount + 1)
+      document.getElementById('dice--rolles').className = 'dice--rolles-active'
     } else {
       setTenzies(false)
       setRollCount(0)
       setDice(AllNewDice())
+      document
+        .getElementById('dice--rolles')
+        .classList.remove('dice--rolles-active')
     }
   }
 
@@ -97,7 +101,9 @@ function App() {
               Roll until all dice are the same. Click each die to freeze it at
               its current value between rolls.
             </h2>
-            {!tenzies && <div>Current Rolles: {rollCount}</div>}
+            <div id="dice--rolles">
+              {!tenzies && 'Current '}Rolles: {rollCount}
+            </div>
           </div>
           <div className="dice--container">{diceElements}</div>
           <div className="buttons--container">

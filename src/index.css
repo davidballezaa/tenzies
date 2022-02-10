@@ -125,6 +125,35 @@ main {
   font-size: 25px;
 }
 
+/* ANIMATIONS */
+
+#dice--rolles {
+  display: none;
+  margin-top: 10px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f5d547;
+}
+
+.dice--rolles-active {
+  display: inline-block !important;
+  animation: grow 1s ease-in-out 1 forwards;
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 @media (max-width: 500px) {
   .die--element {
     width: 40px;
