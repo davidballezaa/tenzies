@@ -106,12 +106,23 @@ main {
   margin-bottom: 10px;
 }
 
+.stats--element {
+  border-bottom: 0.5px solid #ccc;
+  margin-bottom: 10px;
+}
+
 .stats--date {
+  font-size: 18px;
+  margin: 0;
 }
 
 .stats--count {
-  font-size: 20px;
+  font-size: 35px;
   font-weight: bold;
+}
+
+.stats--warning {
+  font-size: 25px;
 }
 
 @media (max-width: 500px) {
@@ -120,11 +131,41 @@ main {
     height: 40px;
     font-size: 30px;
   }
+  .stats--container h2 {
+    font-size: 35px;
+  }
+  .stats--date {
+    font-size: 20px;
+  }
+
+  .stats--count {
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .stats--warning {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 330px) {
   .dice--container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .button {
+    font-size: 20px;
+  }
+
+  .stats--container h2 {
+    font-size: 30px;
+  }
+  .stats--date {
+    font-size: 15px;
+  }
+
+  .stats--count {
+    font-size: 20px;
+    font-weight: bold;
   }
 }
 

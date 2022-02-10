@@ -121,7 +121,7 @@ function App() {
           <h2>My Stats</h2>
           {stats.length > 0 ? (
             stats.map(item => (
-              <div key={item.id}>
+              <div key={item.id} className="stats--element">
                 <p className="stats--date">
                   {item.date}{' '}
                   <span className="stats--count">{item.rollCount} rolls</span>
@@ -129,7 +129,9 @@ function App() {
               </div>
             ))
           ) : (
-            <p>It seems like you don't have any stats yet...</p>
+            <p className="stats--warning">
+              It seems like you don't have any stats yet...
+            </p>
           )}
           <button className="button back--button" onClick={handlePlayAgain}>
             Play Again
