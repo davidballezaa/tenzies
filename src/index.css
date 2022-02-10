@@ -86,7 +86,6 @@ main {
 
 .dice--button {
   background-color: #5035ff;
-  width: 140px;
 }
 
 .stats--button {
@@ -95,7 +94,6 @@ main {
 
 .back--button {
   background-color: #59e391;
-  width: 140px;
 }
 
 /* STATS */
