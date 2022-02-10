@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Die from './components/Die'
 import { nanoid } from 'nanoid'
+import Confetti from 'react-confetti'
 
 function App() {
   const [dice, setDice] = useState(AllNewDice())
@@ -60,6 +61,7 @@ function App() {
 
   return (
     <main>
+      {tenzies && <Confetti />}
       <div className="dice">
         <div className="dice--header">
           <h1>Tenzies</h1>
