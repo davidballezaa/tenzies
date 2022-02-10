@@ -8,7 +8,9 @@ function App() {
   const [tenzies, setTenzies] = useState(false)
   const [rollCount, setRollCount] = useState(0)
   const [seeStats, setSeeStats] = useState(false)
-  const [stats, setStats] = useState([])
+  const [stats, setStats] = useState(
+    JSON.parse(localStorage.getItem('stats')) || []
+  )
 
   useEffect(() => {
     let value = dice[0].value
@@ -32,6 +34,10 @@ function App() {
       ])
     }
   }, [tenzies])
+
+  useEffect(() => {
+    localStorage.setItem('stats', JSON.stringify(stats))
+  }, [stats])
 
   function AllNewDice() {
     let newDice = []
